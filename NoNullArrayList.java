@@ -15,10 +15,16 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     if (value == null) {
       throw new IllegalArgumentException("Your element is null :(");
     }
+    super.add(t);
     return true;
   }
-  //
-  // public T set (int index, T element) {
-  //
-  // }
+
+  public T set (int index, T element) {
+    value = element;
+    if (value == null) {
+      throw new IllegalArgumentException("Your element is null :(");
+    }
+    super.set(index, value);
+    return value;
+  }
 }
