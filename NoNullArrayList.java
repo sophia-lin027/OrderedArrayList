@@ -1,18 +1,14 @@
 import java.util.ArrayList;
 public class NoNullArrayList<T> extends ArrayList<T>{
-  private T value;
-
   public void add(int index, T element) {
-    value = element;
-    if (value == null) {
+    if (element == null) {
       throw new IllegalArgumentException("Your element is null :(");
     }
-    super.add(index, value);
+    super.add(index, element);
   }
 
   public boolean add(T t) {
-    value = t;
-    if (value == null) {
+    if (t == null) {
       throw new IllegalArgumentException("Your element is null :(");
     }
     super.add(t);
@@ -20,12 +16,11 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public T set (int index, T element) {
-    value = element;
-    if (value == null) {
+    if (element == null) {
       throw new IllegalArgumentException("Your element is null :(");
     }
-    super.set(index, value);
-    return value;
+    super.set(index, element);
+    return element;
   }
 
   public NoNullArrayList() {
@@ -33,7 +28,6 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public NoNullArrayList(T startingCapacity) {
-    value = startingCapacity;
     if (startingCapacity == null) {
       throw new IllegalArgumentException("The initial capacity cannot be null");
     }
