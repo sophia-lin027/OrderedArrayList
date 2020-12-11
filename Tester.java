@@ -6,7 +6,9 @@ public class Tester {
     x.add("hello");
     x.add("hi");
     x.add("heya");
+    //x.add(2, null);
     x.add(null);
+    System.out.println(x);
     System.out.println(x);
   }
 }
