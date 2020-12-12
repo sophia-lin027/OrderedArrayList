@@ -16,4 +16,10 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     int ind = helper(element);
     super.add(ind, element);
   }
+
+  public boolean add(T element) {
+    int ind = helper(element);
+    super.add(ind,element);
+    return true;
+  }
 }
