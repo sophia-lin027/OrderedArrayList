@@ -28,6 +28,7 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public NoNullArrayList(T startingCapacity) {
+    super();
     if (startingCapacity == null) {
       throw new IllegalArgumentException("The initial capacity cannot be null");
     }
