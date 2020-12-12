@@ -35,4 +35,8 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     this.remove(index);
     return temp;
   }
+
+  public OrderedArrayList() {
+    super();
+  }
 }
