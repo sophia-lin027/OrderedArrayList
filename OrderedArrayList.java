@@ -11,4 +11,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     }
     return this.size();
   }
+
+  public void add(int index, T element) {
+    int ind = helper(element);
+    super.add(ind, element);
+  }
 }
