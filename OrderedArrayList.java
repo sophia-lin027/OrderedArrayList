@@ -39,4 +39,11 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   public OrderedArrayList() {
     super();
   }
+
+  public OrderedArrayList(T startingCapacity) {
+    super(startingCapacity);
+    if (startingCapacity == null) {
+      throw new IllegalArgumentException("The initial capacity cannot be null");
+    }
+  }
 }
